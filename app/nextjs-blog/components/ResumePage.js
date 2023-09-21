@@ -13,8 +13,10 @@ import GetAppIcon from "@mui/icons-material/GetApp";
 import styles from "../styles/Resume.module.css";
 import { resumeData } from "../public/resumeData";
 import WorkExperienceAccordion from "../components/WorkExperienceAccordion";
+import { useDarkMode } from "./DarkModeContext";
 
 function ResumePage() {
+  const { darkMode } = useDarkMode();
   const [fixedButton, setFixedButton] = useState(false);
 
   useEffect(() => {
@@ -33,8 +35,12 @@ function ResumePage() {
     };
   }, []);
   return (
-    <div>
-      <Box className={styles.resume}>
+    <div className={darkMode ? styles.darkMode : ""}>
+      <Box
+        className={
+          darkMode ? `${styles.resume} ${styles.darkMode}` : styles.resume
+        }
+      >
         <Container maxWidth="sm">
           {/* start download button */}
           <div
@@ -62,7 +68,13 @@ function ResumePage() {
           {/* end download button */}
 
           {/* start contact section */}
-          <div className={styles.section}>
+          <div
+            className={
+              darkMode
+                ? `${styles.section} ${styles.darkSection}`
+                : styles.section
+            }
+          >
             <Typography variant="h4" gutterBottom>
               Contact
             </Typography>
@@ -81,7 +93,13 @@ function ResumePage() {
           {/* end contact section */}
 
           {/* start work experience section */}
-          <div className={styles.section}>
+          <div
+            className={
+              darkMode
+                ? `${styles.section} ${styles.darkSection}`
+                : styles.section
+            }
+          >
             <Typography variant="h4" gutterBottom>
               Work Experience
             </Typography>
@@ -93,37 +111,59 @@ function ResumePage() {
           {/* end work experience section */}
 
           {/* start education section */}
-          <div className={styles.section}>
+          <div
+            className={
+              darkMode
+                ? `${styles.section} ${styles.darkSection}`
+                : styles.section
+            }
+          >
             <Typography variant="h4" gutterBottom>
               Education
             </Typography>
             <List>
               {resumeData.education.map((education, index) => (
-                <List key={index}>
-                  <ListItem>
-                    <ListItemText
-                      primary={education.degree}
-                      secondary={`${education.school} | ${education.dates}`}
-                    />
-                  </ListItem>
-                </List>
+                <ListItem key={index}>
+                  <ListItemText
+                    primary={education.degree}
+                    secondary={`${education.school} | ${education.dates}`}
+                    primaryTypographyProps={
+                      darkMode ? { style: { color: "#fff" } } : {}
+                    }
+                    secondaryTypographyProps={
+                      darkMode ? { style: { color: "#999" } } : {}
+                    }
+                  />
+                </ListItem>
               ))}
             </List>
           </div>
           {/* end education section */}
 
           {/* start certifications section */}
-          <div className={styles.section}>
+          <div
+            className={
+              darkMode
+                ? `${styles.section} ${styles.darkSection}`
+                : styles.section
+            }
+          >
             <Typography variant="h4" gutterBottom>
               Certifications
             </Typography>
-            <List>
+            <List sx={darkMode ? { color: "#fff" } : { color: "#000" }}>
               {resumeData.certifications.map((certification, index) => (
                 <List key={index}>
                   <ListItem>
                     <ListItemText
                       primary={certification.certification}
                       secondary={`${certification.certificationAuthority} | ${certification.certificationDate}`}
+                      primaryTypographyProps={
+                        darkMode ? { style: { color: "#fff" } } : {}
+                      }
+                      secondaryTypographyProps={
+                        darkMode ? { style: { color: "#999" } } : {}
+                      }
                     />
                   </ListItem>
                 </List>
@@ -133,7 +173,13 @@ function ResumePage() {
           {/* end ccertifications section */}
 
           {/* start skills & interests section */}
-          <div className={styles.section}>
+          <div
+            className={
+              darkMode
+                ? `${styles.section} ${styles.darkSection}`
+                : styles.section
+            }
+          >
             <Typography variant="h4" gutterBottom>
               Skills & Interests
             </Typography>

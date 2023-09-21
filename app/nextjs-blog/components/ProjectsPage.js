@@ -16,13 +16,17 @@ function ProjectsPage() {
   return (
     <div className={darkMode ? styles.darkMode : ""}>
       <Container maxWidth="md">
-        <Typography variant="h4" gutterBottom>
+        <Typography variant="h4" gutterBottom sx={{ paddingTop: 5 }}>
           Projects
         </Typography>
         <Grid container spacing={3}>
           {projectsData.map((project, index) => (
             <Grid item xs={12} sm={6} md={4} key={index}>
-              <Card>
+              <Card
+                className={
+                  darkMode ? `${styles.card} ${styles.darkCard}` : styles.card
+                }
+              >
                 <CardContent>
                   <img
                     src={project.imageUrl}

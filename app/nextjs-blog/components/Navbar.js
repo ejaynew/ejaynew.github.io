@@ -11,11 +11,8 @@ import Brightness7Icon from "@mui/icons-material/Brightness7"; // Light mode ico
 import { useDarkMode } from "./DarkModeContext";
 
 export default function Navbar() {
-  const {darkMode, setDarkMode} = useDarkMode();
+  const {darkMode, toggleDarkMode} = useDarkMode();
 
-  const toggleDarkMode = () => {
-    setDarkMode(!darkMode);
-  };
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
