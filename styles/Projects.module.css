@@ -1,6 +1,9 @@
-.darkMode {
+.container {
   min-height: calc(100vh - 100px);
   height: 100%;
+}
+
+.darkMode {
   background-color: #000;
   color: #fff;
 }

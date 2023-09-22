@@ -14,7 +14,11 @@ import styles from "../styles/Projects.module.css";
 function ProjectsPage() {
   const { darkMode } = useDarkMode();
   return (
-    <div className={darkMode ? styles.darkMode : ""}>
+    <div
+      className={
+        darkMode ? `${styles.container} ${styles.darkMode}` : styles.container
+      }
+    >
       <Container maxWidth="md">
         <Typography variant="h4" gutterBottom sx={{ paddingTop: 5 }}>
           Projects
