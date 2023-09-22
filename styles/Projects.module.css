@@ -1,0 +1,15 @@
+.darkMode {
+  min-height: calc(100vh - 100px);
+  height: 100%;
+  background-color: #000;
+  color: #fff;
+}
+
+.darkCard {
+  background-color: #1a1a1a;
+  color: #fff;
+}
+
+.darkCard a {
+  color: lightblue;
+}
