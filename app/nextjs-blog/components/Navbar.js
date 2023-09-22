@@ -11,7 +11,7 @@ import Brightness7Icon from "@mui/icons-material/Brightness7"; // Light mode ico
 import { useDarkMode } from "./DarkModeContext";
 
 export default function Navbar() {
-  const {darkMode, toggleDarkMode} = useDarkMode();
+  const { darkMode, toggleDarkMode } = useDarkMode();
 
   return (
     <Box sx={{ flexGrow: 1 }}>
@@ -22,7 +22,12 @@ export default function Navbar() {
           </Typography>
           {["home", "resume", "projects", "thought garden"].map(
             (name, index) => (
-              <Link key={index} href={name.replace(" ", "-")} passHref>
+              <Link
+                key={index}
+                href={name.replace(" ", "-")}
+                loading={true}
+                passHref
+              >
                 <Button
                   color="primary"
                   style={{ textDecoration: "none", color: "white" }}
@@ -32,7 +37,7 @@ export default function Navbar() {
               </Link>
             )
           )}
-                    <IconButton color="inherit" onClick={toggleDarkMode}>
+          <IconButton color="inherit" onClick={toggleDarkMode}>
             {darkMode ? <Brightness4Icon /> : <Brightness7Icon />}
           </IconButton>
         </Toolbar>
