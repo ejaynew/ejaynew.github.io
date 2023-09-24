@@ -58,7 +58,7 @@ function ResumePage() {
               sx={{
                 backgroundColor: "#967bb6",
                 "&:hover": {
-                  backgroundColor: "orange",
+                  backgroundColor: "#6e5e82",
                 },
               }}
             >
@@ -127,12 +127,6 @@ function ResumePage() {
                   <ListItemText
                     primary={education.degree}
                     secondary={`${education.school} | ${education.dates}`}
-                    primaryTypographyProps={
-                      darkMode ? { style: { color: "#fff" } } : {}
-                    }
-                    secondaryTypographyProps={
-                      darkMode ? { style: { color: "#999" } } : {}
-                    }
                   />
                 </ListItem>
               ))}
@@ -151,19 +145,13 @@ function ResumePage() {
             <Typography variant="h4" gutterBottom>
               Certifications
             </Typography>
-            <List sx={darkMode ? { color: "#fff" } : { color: "#000" }}>
+            <List>
               {resumeData.certifications.map((certification, index) => (
                 <List key={index}>
                   <ListItem>
                     <ListItemText
                       primary={certification.certification}
                       secondary={`${certification.certificationAuthority} | ${certification.certificationDate}`}
-                      primaryTypographyProps={
-                        darkMode ? { style: { color: "#fff" } } : {}
-                      }
-                      secondaryTypographyProps={
-                        darkMode ? { style: { color: "#999" } } : {}
-                      }
                     />
                   </ListItem>
                 </List>

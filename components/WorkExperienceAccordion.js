@@ -24,7 +24,6 @@ export default function WorkExperienceAccordion({ experience }) {
     <Accordion
       expanded={expanded}
       onChange={handleAccordionChange}
-      className={darkMode ? styles.darkMode : ""}
     >
       <AccordionSummary
         expandIcon={<ExpandMoreIcon />}
@@ -34,10 +33,6 @@ export default function WorkExperienceAccordion({ experience }) {
         <ListItemText
           primary={experience.title}
           secondary={`${experience.company} | ${experience.dates}`}
-          primaryTypographyProps={darkMode ? { style: { color: "#fff" } } : {}}
-          secondaryTypographyProps={
-            darkMode ? { style: { color: "#999" } } : {}
-          }
         />
       </AccordionSummary>
       <AccordionDetails>

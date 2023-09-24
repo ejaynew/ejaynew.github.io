@@ -9,10 +9,6 @@
 }
 
 .darkCard {
-  background-color: #1a1a1a;
-  color: #fff;
-}
-
-.darkCard a {
-  color: lightblue;
+  background-color: #fff;
+  color: #000;
 }

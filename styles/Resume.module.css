@@ -17,8 +17,7 @@
 }
 
 .darkSection {
-  background-color: #1a1a1a;
-  color: #fff !important;
+  background-color: #fff;
 }
 
 .downloadBtn {
@@ -36,7 +35,6 @@
 
 .darkMode {
   background-color: #111;
-  color: #fff;
 }
 
 .darkCard a {
