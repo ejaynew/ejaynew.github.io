@@ -3,6 +3,11 @@
 This app was created from the starter template for [Learn Next.js](https://nextjs.org/learn).
 The purpose of the site is to act as a homepage for my projects, resume, and things like that.
 
+## Prerequisites
+
+To run this application locally on your computer, first install the following programs:
+1. [Node js and npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm).
+
 ## Running the application in development mode
 
 To run this application locally on your computer follow these steps:
