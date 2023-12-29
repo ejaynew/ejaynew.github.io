@@ -5,6 +5,7 @@ import Navbar from "./Navbar";
 import Footer from "./Footer";
 import { DarkModeProvider } from "./DarkModeContext";
 
+
 export default function App({ children }) {
   return (
     <div>

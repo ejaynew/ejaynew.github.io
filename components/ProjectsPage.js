@@ -41,7 +41,7 @@ function ProjectsPage() {
                     {project.title}
                   </Typography>
                   <Typography variant="body2">{project.description}</Typography>
-                  <div style={{ marginTop: "10px" }}>
+                  <div className={styles.cardLinks} style={{ marginTop: "10px" }}>
                     {project.links.map((link, linkIndex) => (
                       <a
                         key={linkIndex}

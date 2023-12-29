@@ -25,7 +25,7 @@ export default function Navbar() {
               <Link
                 key={index}
                 href={name.replace(" ", "-")}
-                loading={true}
+                loading={true.toString()}
                 passHref
               >
                 <Button
