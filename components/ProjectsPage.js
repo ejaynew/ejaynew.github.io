@@ -1,7 +1,4 @@
 import React from "react";
-import Navbar from "../components/Navbar";
-import { theme } from "../styles/theme";
-import { ThemeProvider } from "@mui/material/styles";
 import Container from "@mui/material/Container";
 import Typography from "@mui/material/Typography";
 import Grid from "@mui/material/Grid";
@@ -13,6 +10,7 @@ import styles from "../styles/Projects.module.css";
 
 function ProjectsPage() {
   const { darkMode } = useDarkMode();
+
   return (
     <div
       className={
@@ -41,7 +39,10 @@ function ProjectsPage() {
                     {project.title}
                   </Typography>
                   <Typography variant="body2">{project.description}</Typography>
-                  <div className={styles.cardLinks} style={{ marginTop: "10px" }}>
+                  <div
+                    className={styles.cardLinks}
+                    style={{ marginTop: "10px" }}
+                  >
                     {project.links.map((link, linkIndex) => (
                       <a
                         key={linkIndex}
