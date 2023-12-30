@@ -15,7 +15,7 @@ export const resumeData = {
       location: "Los Angeles, CA",
       description: [
         "Collaborated with cross-functional teams to deliver cloud transformation solutions for clients, including Capital Group and Ford.",
-        "Developed user-friendly and dynamic interfaces using React.js, resulting in improved user experience.",
+        "Developed user-friendly and dynamic dashboards using PowerBI, resulting in improved user experience.",
         "Completed training sequences covering tools like React, JavaScript, TypeScript, Python, and Azure.",
         "Promoted from Junior Associate Software Developer in 01/2023.",
       ],
