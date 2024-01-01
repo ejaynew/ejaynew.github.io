@@ -20,7 +20,7 @@ export default function Navbar() {
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
             Emma Jayne
           </Typography>
-          {["home", "resume", "projects", "thought garden"].map(
+          {["home", "resume", "projects"].map(
             (name, index) => (
               <Link
                 key={index}
