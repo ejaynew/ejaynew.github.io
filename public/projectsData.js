@@ -8,8 +8,8 @@ export const projectsData = [
       { Github: "https://github.com/ejaynew/quiz-me" },
       { Demo: "https://ejaynew.github.io/quiz-me/" },
       {
-        "Thought Garden":
-          "https://ejaynew.github.io/thought-garden/building-a-trivia-app-with-0-and-a-few-hours",
+        "Digital Garden":
+          "https://ejaynew.github.io/digital-garden/quiz-me",
       },
     ],
   },
@@ -20,7 +20,7 @@ export const projectsData = [
     links: [
       { Github: "https://github.com/ejaynew/jammming" },
       { Demo: "https://storied-cuchufli-6f6a35.netlify.app/" },
-      { "Thought Garden": "https://ejaynew.github.io/thought-garden/jammming" },
+      { "Digital Garden": "https://ejaynew.github.io/digital-garden/jammming" },
     ],
   },
 ];

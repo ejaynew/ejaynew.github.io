@@ -14,9 +14,9 @@ export const resumeData = {
       title: "Associate Software Developer",
       location: "Los Angeles, CA",
       description: [
-        "Collaborated with cross-functional teams to deliver cloud transformation solutions for clients, including Capital Group and Ford.",
+        "Collaborated with cross-functional teams to deliver cloud transformation solutions for clients, including Capital Group, Ford, and Phillips66.",
         "Developed user-friendly and dynamic dashboards using PowerBI, resulting in improved user experience.",
-        "Completed training sequences covering tools like React, JavaScript, TypeScript, Python, and Azure.",
+        "Completed training sequences covering tools like React, JavaScript, TypeScript, Python, and MS Azure.",
         "Promoted from Junior Associate Software Developer in 01/2023.",
       ],
     },
@@ -94,9 +94,4 @@ export const resumeData = {
     "Road trips",
     "Foreign languages",
   ],
-  links: {
-    github: "https://github.com/ejaynew",
-    linkedin: "https://www.linkedin.com/in/ejaynew/",
-    digitalGarden: "https://ejaynew.github.io/",
-  },
 };
