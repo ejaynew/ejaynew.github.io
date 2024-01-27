@@ -7,10 +7,6 @@ export const projectsData = [
     links: [
       { Github: "https://github.com/ejaynew/quiz-me" },
       { Demo: "https://ejaynew.github.io/quiz-me/" },
-      {
-        "Digital Garden":
-          "https://ejaynew.github.io/digital-garden/quiz-me",
-      },
     ],
   },
   {
@@ -20,7 +16,6 @@ export const projectsData = [
     links: [
       { Github: "https://github.com/ejaynew/jammming" },
       { Demo: "https://storied-cuchufli-6f6a35.netlify.app/" },
-      { "Digital Garden": "https://ejaynew.github.io/digital-garden/jammming" },
     ],
   },
 ];
