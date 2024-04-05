@@ -166,12 +166,10 @@ function ResumePage() {
             }
           >
             <Typography variant="h4" gutterBottom>
-              Skills & Interests
+              Skills
             </Typography>
             <Typography variant="body1">
-              <strong>Skills:</strong> {resumeData.skills.join(", ")}
-              <br />
-              <strong>Interests:</strong> {resumeData.interests.join(", ")}
+              {resumeData.skills.join(", ")}
             </Typography>
           </div>
           {/* end skills & interests section */}
