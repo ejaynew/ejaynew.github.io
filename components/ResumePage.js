@@ -31,6 +31,7 @@ function ResumePage() {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
   return (
     <div className={darkMode ? styles.darkMode : ""}>
       <Box
@@ -39,7 +40,7 @@ function ResumePage() {
         }
       >
         <Container maxWidth="sm">
-          {/* start download button */}
+          {/* Download button */}
           <div
             className={`${styles.downloadBtn} ${
               fixedButton ? styles.fixedBtn : ""
@@ -51,7 +52,7 @@ function ResumePage() {
               href="/resume.pdf"
               aria-label="Download Resume"
               target="_blank"
-              download="EmmaResumeDownload.pdf"
+              download="Emma Jayne  — Cloud Engineer, Software Developer.pdf"
               sx={{
                 backgroundColor: "#967bb6",
                 "&:hover": {
@@ -62,9 +63,8 @@ function ResumePage() {
               <GetAppIcon />
             </IconButton>
           </div>
-          {/* end download button */}
 
-          {/* start contact section */}
+          {/* Contact section */}
           <div
             className={
               darkMode
@@ -87,9 +87,8 @@ function ResumePage() {
               ))}
             </List>
           </div>
-          {/* end contact section */}
 
-          {/* start work experience section */}
+          {/* Work experience section */}
           <div
             className={
               darkMode
@@ -105,9 +104,8 @@ function ResumePage() {
               <WorkExperienceAccordion key={index} experience={experience} />
             ))}
           </div>
-          {/* end work experience section */}
 
-          {/* start education section */}
+          {/* Education section */}
           <div
             className={
               darkMode
@@ -129,9 +127,8 @@ function ResumePage() {
               ))}
             </List>
           </div>
-          {/* end education section */}
 
-          {/* start certifications section */}
+          {/* Certifications section */}
           <div
             className={
               darkMode
@@ -155,9 +152,8 @@ function ResumePage() {
               ))}
             </List>
           </div>
-          {/* end ccertifications section */}
 
-          {/* start skills & interests section */}
+          {/* Skills section */}
           <div
             className={
               darkMode
@@ -168,11 +164,15 @@ function ResumePage() {
             <Typography variant="h4" gutterBottom>
               Skills
             </Typography>
-            <Typography variant="body1">
-              {resumeData.skills.join(", ")}
-            </Typography>
+            {Object.keys(resumeData.skills).map((category, index) => (
+              <div key={index}>
+                <Typography variant="body1">
+                  <strong>{category}: </strong>
+                  {(resumeData.skills[category]).join(' | ')}
+                </Typography>
+              </div>
+            ))}
           </div>
-          {/* end skills & interests section */}
         </Container>
       </Box>
     </div>
